@@ -111,7 +111,7 @@ const NewItems = () => {
                 {...options}
               >
                 {newItems.map((item) => (
-                  <div className="nft__item" key={item.nftId || `item-${item.id}`}>
+                  <div className="nft__item" key={item.id}>
                     <div className="author_list_pp">
                       <Link
                         to={`/author/${item.authorId}`}
