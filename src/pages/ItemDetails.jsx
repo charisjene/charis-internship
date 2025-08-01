@@ -3,6 +3,7 @@ import EthImage from "../images/ethereum.svg";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import Skeleton from "../components/UI/Skeleton";
+import WOW from 'wowjs';
 
 
 const ItemDetails = () => {
@@ -21,6 +22,10 @@ const ItemDetails = () => {
     };
 
     useEffect(() => {
+      new WOW.WOW({
+            live: false,
+        }).init();
+
     window.scrollTo(0, 0);
     fetchNftDetails();
   }, []);
