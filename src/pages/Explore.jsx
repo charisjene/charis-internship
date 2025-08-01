@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 import SubHeader from "../images/subheader.jpg";
 import ExploreItems from "../components/explore/ExploreItems";
-import WOW from "wowjs";
 
 const Explore = () => {
- useEffect(() => {
-  new WOW.WOW({
-    live: false,
-  }).init();
-  
-  window.scrollTo(0, 0);
-}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div id="wrapper">
@@ -36,7 +31,7 @@ const Explore = () => {
 
         <section aria-label="section">
           <div className="container">
-            <div className="row wow fadeIn">
+            <div className="row">
               <ExploreItems />
             </div>
           </div>
