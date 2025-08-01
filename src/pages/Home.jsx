@@ -12,7 +12,6 @@ const Home = () => {
     new WOW.WOW({
       live: false,
     }).init();
-    window.scrollTo(0, 0);
   }, []);
 
   return (
