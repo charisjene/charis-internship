@@ -6,14 +6,14 @@ import Skeleton from "../UI/Skeleton";
 
 const TopSellers = () => {
   const [topSellers, setTopSellers] = useState([]);
-    const getData = async () => {
+    const getTopSellersData = async () => {
         const response = await axios.get(
           `https://us-central1-nft-cloud-functions.cloudfunctions.net/topSellers`
         );
         setTopSellers(response.data);
       };
         useEffect(() => {
-          getData();
+          getTopSellersData();
         }, []);
 
   return (
