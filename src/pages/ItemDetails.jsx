@@ -3,9 +3,14 @@ import EthImage from "../images/ethereum.svg";
 import { Link } from "react-router-dom";
 import AuthorImage from "../images/author_thumbnail.jpg";
 import nftImage from "../images/nftImage.jpg";
+import WOW from 'wowjs'
 
 const ItemDetails = () => {
   useEffect(() => {
+    new WOW.WOW({
+            live: false,
+        }).init();
+
     window.scrollTo(0, 0);
     // FROM MAIN!! DO NOT REMOVE
   }, []);

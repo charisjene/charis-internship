@@ -5,9 +5,13 @@ import Landing from "../components/home/Landing";
 import LandingIntro from "../components/home/LandingIntro";
 import NewItems from "../components/home/NewItems";
 import TopSellers from "../components/home/TopSellers";
+import WOW from "wowjs";
 
 const Home = () => {
   useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
     window.scrollTo(0, 0);
   }, []);
 

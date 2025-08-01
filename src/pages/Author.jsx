@@ -5,6 +5,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Skeleton from "../components/UI/Skeleton";
 import { useCallback } from "react";
+import WOW from 'wowjs';
 
 const Author = () => {
   const [authorData, setAuthorData] = useState("");
@@ -20,6 +21,10 @@ const Author = () => {
   }, [authorId]);
 
   useEffect(() => {
+    new WOW.WOW({
+        live: false,
+    }).init();
+
     window.scrollTo(0, 0);
     getAuthorData();
   }, [getAuthorData]);
