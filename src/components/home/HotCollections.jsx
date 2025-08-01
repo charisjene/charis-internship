@@ -55,7 +55,7 @@ const HotCollections = () => {
   return (
     <section id="section-collections" className="no-bottom">
       <div className="container">
-        <div className="ro wow fadeIn">
+        <div className="row wow fadeIn">
           <div className="col-lg-12">
             <div className="text-center">
               <h2>Hot Collections</h2>
